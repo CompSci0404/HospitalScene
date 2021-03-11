@@ -46,6 +46,11 @@ ExportedObj/
 *.opendb
 *.VC.db
 
+# with 2020.3 there is a few other files that are not being caught by .gitignore. 
+
+*.exe?.log
+
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
@@ -89,4 +94,4 @@ $RECYCLE.BIN/
 *.msp
 
 # Windows shortcuts
-*.lnk
+*lnk
