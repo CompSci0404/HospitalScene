@@ -49,7 +49,7 @@ ExportedObj/
 # with 2020.3 there is a few other files that are not being caught by .gitignore. 
 
 *.exe?.log
-
+logs/
 
 # Unity3D generated meta files
 *.pidb.meta
