@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HospitalRoomScene.unity
+    guid: df9345fe3d595254d9da9137d94cf400
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5ab31e7ac634fe549aa27ad0f66e25cb, type: 2}
     xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: e9de0dfdc836f2f4aa1f2a1c9851637b, type: 2}
