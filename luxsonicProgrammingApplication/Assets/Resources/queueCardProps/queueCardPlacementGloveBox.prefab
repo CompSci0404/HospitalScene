@@ -106,7 +106,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9115613027626993689}
   - component: {fileID: 6321515571665460780}
-  m_Layer: 0
+  - component: {fileID: 8459740996474704195}
+  m_Layer: 6
   m_Name: queueCardPlacementGloveBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +121,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7586139711948251842}
-  m_LocalRotation: {x: -0, y: -0, z: -0.004696113, w: 0.99998903}
+  m_LocalRotation: {x: 0, y: 0, z: -0.00469499, w: 0.999989}
   m_LocalPosition: {x: -0.517, y: 1.245, z: 6.778205}
   m_LocalScale: {x: 1.1139897, y: 1.0000135, z: 1}
   m_Children:
@@ -136,11 +137,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7586139711948251842}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.60942554, y: 0.36280328, z: 0.4110241}
-  m_Center: {x: -0.15840745, y: -0.16612402, z: 0.16958475}
+  m_Size: {x: 0.6395687, y: 0.36280328, z: 0.56185156}
+  m_Center: {x: -0.1433362, y: -0.16612405, z: 0.0941714}
+--- !u!114 &8459740996474704195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7586139711948251842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6a0c1d4b4b99449afbb1ce88c2584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameOfItemPlacedHere: GloveBox
 --- !u!1 &8873864775867412316
 GameObject:
   m_ObjectHideFlags: 0

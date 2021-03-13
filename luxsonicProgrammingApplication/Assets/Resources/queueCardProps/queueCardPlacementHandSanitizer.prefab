@@ -185,7 +185,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5248763251905619195}
   - component: {fileID: 5248763251905619194}
-  m_Layer: 0
+  - component: {fileID: 2410984704934720986}
+  m_Layer: 6
   m_Name: queueCardPlacementHandSanitizer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +200,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5248763251905619077}
-  m_LocalRotation: {x: -0, y: -0, z: -0.004696113, w: 0.99998903}
+  m_LocalRotation: {x: 0, y: 0, z: -0.00469499, w: 0.999989}
   m_LocalPosition: {x: 0.367, y: 1.236, z: 6.778205}
   m_LocalScale: {x: 1.1139897, y: 1.0000135, z: 1}
   m_Children:
@@ -215,11 +216,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5248763251905619077}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.60942554, y: 0.36280328, z: 0.4110241}
-  m_Center: {x: -0.15840745, y: -0.16612402, z: 0.16958475}
+  m_Size: {x: 0.68063796, y: 0.36280328, z: 0.51593035}
+  m_Center: {x: -0.12280222, y: -0.16612405, z: 0.117132686}
+--- !u!114 &2410984704934720986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248763251905619077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6a0c1d4b4b99449afbb1ce88c2584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameOfItemPlacedHere: HandSanitizer
 --- !u!1 &7467360182119212249
 GameObject:
   m_ObjectHideFlags: 0

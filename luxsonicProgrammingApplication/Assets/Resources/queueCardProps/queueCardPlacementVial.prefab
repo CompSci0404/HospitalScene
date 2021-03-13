@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2016549038272723924}
   - component: {fileID: 6568160022650006793}
-  m_Layer: 0
+  - component: {fileID: 1757902691}
+  m_Layer: 6
   m_Name: queueCardPlacementVial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3107292239466402185}
-  m_LocalRotation: {x: -0, y: -0, z: -0.004696113, w: 0.99998903}
+  m_LocalRotation: {x: 0, y: 0, z: -0.00469499, w: 0.999989}
   m_LocalPosition: {x: -1.412, y: 1.252, z: 6.778205}
   m_LocalScale: {x: 1.1139897, y: 1.0000135, z: 1}
   m_Children:
@@ -40,11 +41,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3107292239466402185}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.60942554, y: 0.36280328, z: 0.4110241}
-  m_Center: {x: -0.15840745, y: -0.16612402, z: 0.16958475}
+  m_Size: {x: 0.6094256, y: 0.44472492, z: 0.5705177}
+  m_Center: {x: -0.15840746, y: -0.12516323, z: 0.08983797}
+--- !u!114 &1757902691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107292239466402185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6a0c1d4b4b99449afbb1ce88c2584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameOfItemPlacedHere: Vial
 --- !u!1 &3581669639688798906
 GameObject:
   m_ObjectHideFlags: 0

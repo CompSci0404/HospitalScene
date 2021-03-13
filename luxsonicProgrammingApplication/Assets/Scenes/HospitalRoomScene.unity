@@ -2006,24 +2006,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6150291947576191594, guid: fd130985cb9add549aac50240bdc37d2, type: 3}
   m_PrefabInstance: {fileID: 4665084359517498015}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1757902688 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3107292239466402185, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
-  m_PrefabInstance: {fileID: 8020437818983473380}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1757902691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757902688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6a0c1d4b4b99449afbb1ce88c2584f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameOfItemPlacedHere: Vial
 --- !u!4 &1793984970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1830786198892705169, guid: 758b1a4f1861d68429bdbc8e9e6f7f89, type: 3}
@@ -2136,7 +2118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fc156b8dd12c942bbcaf4344fb8312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfItemsInPlay: 1
+  numberOfItemsInPlay: 4
 --- !u!4 &1917988885
 Transform:
   m_ObjectHideFlags: 0
@@ -2222,30 +2204,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: queueCardPlacementHandSanitizer
       objectReference: {fileID: 0}
-    - target: {fileID: 5248763251905619077, guid: 0c4015f9ef70ea74bae482f100df3764, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248763251905619194, guid: 0c4015f9ef70ea74bae482f100df3764, type: 3}
-      propertyPath: m_Size.x
-      value: 0.68063796
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248763251905619194, guid: 0c4015f9ef70ea74bae482f100df3764, type: 3}
-      propertyPath: m_Size.z
-      value: 0.51593035
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248763251905619194, guid: 0c4015f9ef70ea74bae482f100df3764, type: 3}
-      propertyPath: m_Center.x
-      value: -0.12280222
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248763251905619194, guid: 0c4015f9ef70ea74bae482f100df3764, type: 3}
-      propertyPath: m_Center.y
-      value: -0.16612405
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248763251905619194, guid: 0c4015f9ef70ea74bae482f100df3764, type: 3}
-      propertyPath: m_Center.z
-      value: 0.117132686
-      objectReference: {fileID: 0}
     - target: {fileID: 5248763251905619195, guid: 0c4015f9ef70ea74bae482f100df3764, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2299,33 +2257,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6321515571665460780, guid: 72d01ca3fd692d04d9215540ef4fbced, type: 3}
-      propertyPath: m_Size.x
-      value: 0.6395687
-      objectReference: {fileID: 0}
-    - target: {fileID: 6321515571665460780, guid: 72d01ca3fd692d04d9215540ef4fbced, type: 3}
-      propertyPath: m_Size.z
-      value: 0.56185156
-      objectReference: {fileID: 0}
-    - target: {fileID: 6321515571665460780, guid: 72d01ca3fd692d04d9215540ef4fbced, type: 3}
-      propertyPath: m_Center.x
-      value: -0.1433362
-      objectReference: {fileID: 0}
-    - target: {fileID: 6321515571665460780, guid: 72d01ca3fd692d04d9215540ef4fbced, type: 3}
-      propertyPath: m_Center.y
-      value: -0.16612405
-      objectReference: {fileID: 0}
-    - target: {fileID: 6321515571665460780, guid: 72d01ca3fd692d04d9215540ef4fbced, type: 3}
-      propertyPath: m_Center.z
-      value: 0.0941714
-      objectReference: {fileID: 0}
     - target: {fileID: 7586139711948251842, guid: 72d01ca3fd692d04d9215540ef4fbced, type: 3}
       propertyPath: m_Name
       value: queueCardPlacementGloveBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 7586139711948251842, guid: 72d01ca3fd692d04d9215540ef4fbced, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9115613027626993689, guid: 72d01ca3fd692d04d9215540ef4fbced, type: 3}
       propertyPath: m_RootOrder
@@ -8027,10 +7961,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: queueCardPlacementSyringe
       objectReference: {fileID: 0}
-    - target: {fileID: 696554210233883123, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 4238800935381776431, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -8074,30 +8004,6 @@ PrefabInstance:
     - target: {fileID: 4238800935381776431, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.538
-      objectReference: {fileID: 0}
-    - target: {fileID: 5130324908147281606, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
-      propertyPath: m_Size.x
-      value: 0.6094256
-      objectReference: {fileID: 0}
-    - target: {fileID: 5130324908147281606, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
-      propertyPath: m_Size.y
-      value: 0.42062742
-      objectReference: {fileID: 0}
-    - target: {fileID: 5130324908147281606, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
-      propertyPath: m_Size.z
-      value: 0.5760967
-      objectReference: {fileID: 0}
-    - target: {fileID: 5130324908147281606, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
-      propertyPath: m_Center.x
-      value: -0.15840746
-      objectReference: {fileID: 0}
-    - target: {fileID: 5130324908147281606, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
-      propertyPath: m_Center.y
-      value: -0.13721198
-      objectReference: {fileID: 0}
-    - target: {fileID: 5130324908147281606, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
-      propertyPath: m_Center.z
-      value: 0.08704847
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
@@ -8265,38 +8171,6 @@ PrefabInstance:
     - target: {fileID: 3107292239466402185, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
       propertyPath: m_Name
       value: queueCardPlacementVial
-      objectReference: {fileID: 0}
-    - target: {fileID: 3107292239466402185, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568160022650006793, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
-      propertyPath: m_Size.x
-      value: 0.6094256
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568160022650006793, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
-      propertyPath: m_Size.y
-      value: 0.44472492
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568160022650006793, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
-      propertyPath: m_Size.z
-      value: 0.5705177
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568160022650006793, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
-      propertyPath: m_Center.x
-      value: -0.15840746
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568160022650006793, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
-      propertyPath: m_Center.y
-      value: -0.12516323
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568160022650006793, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
-      propertyPath: m_Center.z
-      value: 0.08983797
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568160022650006793, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
