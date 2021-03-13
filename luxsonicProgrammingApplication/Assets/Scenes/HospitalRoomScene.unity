@@ -2006,6 +2006,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6150291947576191594, guid: fd130985cb9add549aac50240bdc37d2, type: 3}
   m_PrefabInstance: {fileID: 4665084359517498015}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1757902688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3107292239466402185, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
+  m_PrefabInstance: {fileID: 8020437818983473380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1757902691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757902688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6a0c1d4b4b99449afbb1ce88c2584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameOfItemPlacedHere: Vial
 --- !u!4 &1793984970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1830786198892705169, guid: 758b1a4f1861d68429bdbc8e9e6f7f89, type: 3}
@@ -2089,6 +2107,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5169681382315497294, guid: f50cf96ba9a5fbb4b872d64c4ba18e1d, type: 3}
   m_PrefabInstance: {fileID: 4665084360470800411}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1917988883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1917988885}
+  - component: {fileID: 1917988884}
+  m_Layer: 0
+  m_Name: ScenarioManager
+  m_TagString: SManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1917988884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917988883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fc156b8dd12c942bbcaf4344fb8312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfItemsInPlay: 1
+--- !u!4 &1917988885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917988883}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.8524636, y: 3.204, z: 5.411384}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1924414613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7456925638877675950, guid: 746c7fe79fa2b6544805d12c2d0773f9, type: 3}
@@ -2159,6 +2221,10 @@ PrefabInstance:
     - target: {fileID: 5248763251905619077, guid: 0c4015f9ef70ea74bae482f100df3764, type: 3}
       propertyPath: m_Name
       value: queueCardPlacementHandSanitizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248763251905619077, guid: 0c4015f9ef70ea74bae482f100df3764, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5248763251905619194, guid: 0c4015f9ef70ea74bae482f100df3764, type: 3}
       propertyPath: m_Size.x
@@ -2256,6 +2322,10 @@ PrefabInstance:
     - target: {fileID: 7586139711948251842, guid: 72d01ca3fd692d04d9215540ef4fbced, type: 3}
       propertyPath: m_Name
       value: queueCardPlacementGloveBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586139711948251842, guid: 72d01ca3fd692d04d9215540ef4fbced, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9115613027626993689, guid: 72d01ca3fd692d04d9215540ef4fbced, type: 3}
       propertyPath: m_RootOrder
@@ -7957,6 +8027,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: queueCardPlacementSyringe
       objectReference: {fileID: 0}
+    - target: {fileID: 696554210233883123, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4238800935381776431, guid: 5dc028ffc3231bd49ac4f807aadae038, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -8087,6 +8161,7 @@ GameObject:
   - component: {fileID: 6724586556980233104}
   - component: {fileID: 6724586556978938864}
   - component: {fileID: 6724586556977938864}
+  - component: {fileID: 6724586556980142065}
   m_Layer: 0
   m_Name: medCabinet
   m_TagString: Untagged
@@ -8094,6 +8169,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &6724586556980142065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6724586556980142064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7224043, y: 0.96959203, z: 0.055303607}
+  m_Center: {x: -1.6950261e-12, y: -0.07427249, z: -0.034982767}
 --- !u!4 &6724586556980233104
 Transform:
   m_ObjectHideFlags: 0
@@ -8178,6 +8266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: queueCardPlacementVial
       objectReference: {fileID: 0}
+    - target: {fileID: 3107292239466402185, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6568160022650006793, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
       propertyPath: m_Size.x
       value: 0.6094256
@@ -8201,6 +8293,10 @@ PrefabInstance:
     - target: {fileID: 6568160022650006793, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
       propertyPath: m_Center.z
       value: 0.08983797
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568160022650006793, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 875ef1ebefa5efc40b87591f9e9a77b7, type: 3}

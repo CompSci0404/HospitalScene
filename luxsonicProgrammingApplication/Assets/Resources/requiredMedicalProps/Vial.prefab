@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7403149814738890800}
   - component: {fileID: 7403149814742315024}
   - component: {fileID: 7403149814741316176}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Liquid_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7403149814738891244}
   - component: {fileID: 7403149814742315470}
   - component: {fileID: 7403149814741316110}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpCap_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,8 +176,8 @@ GameObject:
   - component: {fileID: 5623681638216317031}
   - component: {fileID: -8556897276014409480}
   - component: {fileID: -80578486049372812}
-  m_Layer: 0
-  m_Name: SpJar_MD_03
+  m_Layer: 7
+  m_Name: Vial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

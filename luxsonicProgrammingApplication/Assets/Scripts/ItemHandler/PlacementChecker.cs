@@ -8,21 +8,22 @@ public class PlacementChecker : MonoBehaviour
 
     private ScenarioManager SManager;         /*the ScenarioManager system! */ 
 
-    private bool itemPlaced;            /*boolean check to see if placed item correctly!*/ 
+    private bool itemPlaced;            /*boolean check to see if placed item correctly!*/
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
 
-        if (collision.gameObject.name.Equals(nameOfItemPlacedHere))
+        if (other.gameObject.name.Equals(nameOfItemPlacedHere))
         {
             itemPlaced = true;
 
             SManager.updateScenarioManager(itemPlaced, nameOfItemPlacedHere);
 
+           // other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+
+
         }
-
     }
-
 
     private void Start()
     {
