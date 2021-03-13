@@ -49,7 +49,7 @@ public class ScenarioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.GameOverUI.SetActive(false);
+        //this.GameOverUI.SetActive(false);
         this.bottomShelfItems = new Dictionary<string, bool>();
         this.IS = GameObject.FindGameObjectWithTag("itemHandler").GetComponent<itemSpawner>();
 

@@ -6,8 +6,8 @@ public class itemSpawner : MonoBehaviour
 {
     public  List<GameObject> possibleSpawns;
     private List<GameObject> medicalSupplies;
-    private List<GameObject> allItems; 
-    
+    private List<GameObject> allItems;
+    private int numberTimesToShuffle = 50; 
     /*for now I think I can get by without storing each spawned item into its own ADT*/
    
     public void buildMedicalSupplies()
@@ -36,23 +36,27 @@ public class itemSpawner : MonoBehaviour
     public void spawnItemsOnShelf()
     {
 
-        List<GameObject> shuffledSpawns = new List<GameObject>();
+        GameObject spawnHolder1 = null;
+        GameObject spawnHolder2 = null;
+        int randomNumber1 = -1;
+        int randomNumber2 = -1; 
 
-        int totalSpawns = this.possibleSpawns.Count;
-
-        for(int x = 0; x < totalSpawns; x++)
+        
+        for(int x = 0; x < this.numberTimesToShuffle; x++)
         {
-            int randomMedicalSpawn = UnityEngine.Random.Range(0, this.possibleSpawns.Count-1);
+            randomNumber1 = UnityEngine.Random.Range(0, this.possibleSpawns.Count);
+            randomNumber2 = UnityEngine.Random.Range(0, this.possibleSpawns.Count);
 
-            shuffledSpawns.Add(this.possibleSpawns[randomMedicalSpawn]);
+            spawnHolder1 = this.possibleSpawns[randomNumber1];
+            spawnHolder2 = this.possibleSpawns[randomNumber2];
 
-            this.possibleSpawns.RemoveAt(randomMedicalSpawn); 
-
+            this.possibleSpawns[randomNumber1] = spawnHolder2;
+            this.possibleSpawns[randomNumber2] = spawnHolder1;
         }
 
         for (int y = 0 ; y < this.medicalSupplies.Count; y++)
         {
-            GameObject spawnedMedicalItem = Instantiate(this.medicalSupplies[y], shuffledSpawns[y].transform.position, Quaternion.identity);
+            GameObject spawnedMedicalItem = Instantiate(this.medicalSupplies[y], this.possibleSpawns[y].transform.position, Quaternion.identity);
 
             spawnedMedicalItem.name = this.medicalSupplies[y].name;     /*removes cloned from name.*/
 
@@ -60,13 +64,6 @@ public class itemSpawner : MonoBehaviour
             this.allItems.Add(spawnedMedicalItem); 
 
         }
-
-
-        for(int z = 0; z < shuffledSpawns.Count; z++)
-        {
-            this.possibleSpawns.Add(shuffledSpawns[z]);     /*these will be re-shuffled anyways, so it does not matter which way then enter the list.*/
-        }
-
 
 
     }
