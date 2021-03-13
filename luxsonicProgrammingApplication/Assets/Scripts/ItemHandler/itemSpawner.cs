@@ -6,13 +6,14 @@ public class itemSpawner : MonoBehaviour
 {
     public  List<GameObject> possibleSpawns;
     private List<GameObject> medicalSupplies;
+    private List<GameObject> allItems; 
     
     /*for now I think I can get by without storing each spawned item into its own ADT*/
    
     public void buildMedicalSupplies()
     {
         this.medicalSupplies = new List<GameObject>();
-      
+        this.allItems = new List<GameObject>();
 
         UnityEngine.Object[] prefabs = Resources.LoadAll("requiredMedicalProps", typeof(GameObject)); 
 
@@ -56,20 +57,43 @@ public class itemSpawner : MonoBehaviour
             spawnedMedicalItem.name = this.medicalSupplies[y].name;     /*removes cloned from name.*/
 
 
+            this.allItems.Add(spawnedMedicalItem); 
+
         }
 
 
         for(int z = 0; z < shuffledSpawns.Count; z++)
         {
-            this.possibleSpawns.Add(shuffledSpawns[z]);     /*reset the spawn points so we can re-shuffle them to repeat the sceniaro if the player deems so.*/
+            this.possibleSpawns.Add(shuffledSpawns[z]);     /*these will be re-shuffled anyways, so it does not matter which way then enter the list.*/
         }
 
 
 
     }
+
+
+    public void cleanUpItems()
+    {
+
+        int totalPropsSpawned = this.allItems.Count;
+
+        for (int x = 0; x < totalPropsSpawned; x ++)
+        {
+
+            GameObject p = this.allItems[x];
+
+            Destroy(p); 
+        }
+
+        this.allItems.Clear();
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+
+        
 
         if(possibleSpawns == null)
         {
