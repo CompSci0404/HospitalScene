@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - SManager
+  - itemHandler
   layers:
   - Default
   - TransparentFX
