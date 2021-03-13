@@ -53,6 +53,8 @@ public class itemSpawner : MonoBehaviour
         {
             GameObject spawnedMedicalItem = Instantiate(this.medicalSupplies[y], shuffledSpawns[y].transform.position, Quaternion.identity);
 
+            spawnedMedicalItem.name = this.medicalSupplies[y].name;     /*removes cloned from name.*/
+
 
         }
 
