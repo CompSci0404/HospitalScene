@@ -9,7 +9,7 @@ TagManager:
   - Glove
   - Rhand
   - Lhand
-  - GloveBox
+  - Prop
   layers:
   - Default
   - TransparentFX

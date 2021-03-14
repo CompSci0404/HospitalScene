@@ -6,6 +6,8 @@ public class rayCastHandler : XRRayInteractor
    
     public override bool CanSelect(XRBaseInteractable interactable)
     {
+        Debug.Log("does this touch?");
+
         if (interactable.gameObject.tag.Equals("Glove"))
         {
 
@@ -26,5 +28,21 @@ public class rayCastHandler : XRRayInteractor
         return base.CanSelect(interactable);
     }
 
+
+    
+    public override bool CanHover(XRBaseInteractable interactable)
+    {
+        Debug.Log("test test test");
+
+
+        if (interactable.gameObject.tag.Equals("Prop"))
+        {
+            interactable.GetComponent<PopUpMenuHandler>().showUI();
+
+        }
+
+
+        return base.CanHover(interactable);
+    }
 
 }
