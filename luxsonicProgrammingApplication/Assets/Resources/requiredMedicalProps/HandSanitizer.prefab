@@ -315,6 +315,7 @@ GameObject:
   - component: {fileID: 6830152461040114097}
   - component: {fileID: 8731976647423850596}
   - component: {fileID: 5140661321048238797}
+  - component: {fileID: 8131303490172277868}
   m_Layer: 0
   m_Name: HandSanitizer
   m_TagString: Prop
@@ -518,6 +519,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.13424753, y: 0.26105413, z: 0.06676627}
   m_Center: {x: 0, y: 0.1311299, z: 0}
+--- !u!114 &8131303490172277868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582385764975016649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8447eb9fe74284a80ddff5bc816a9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIChildPositionNumber: 2
 --- !u!1 &1582385764975016731
 GameObject:
   m_ObjectHideFlags: 0
