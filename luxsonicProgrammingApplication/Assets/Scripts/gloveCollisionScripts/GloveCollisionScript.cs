@@ -9,10 +9,13 @@ public class GloveCollisionScript : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
+
         if (collision.gameObject.tag.Equals("Glove"))
         {
 
             this.gameObject.GetComponent<MeshRenderer>().material = gloveColor;
+
+            
 
             Destroy(collision.gameObject);  // get rid of the glove prop.
         }

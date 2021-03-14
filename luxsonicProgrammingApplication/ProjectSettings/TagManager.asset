@@ -9,6 +9,7 @@ TagManager:
   - Glove
   - Rhand
   - Lhand
+  - GloveBox
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - Rhand
   - Lhand
-  - 
-  - 
+  - Glove
+  - Glove Box
   - 
   - 
   - 
