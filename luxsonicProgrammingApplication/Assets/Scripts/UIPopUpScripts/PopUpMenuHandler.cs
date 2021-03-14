@@ -9,7 +9,6 @@ public class PopUpMenuHandler : MonoBehaviour
     private GameObject PopUpUi; 
 
 
-
     public void hideUI()
     {
 

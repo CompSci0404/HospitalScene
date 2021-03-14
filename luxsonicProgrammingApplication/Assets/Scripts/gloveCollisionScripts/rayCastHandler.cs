@@ -3,7 +3,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class rayCastHandler : XRRayInteractor
 {
-   
+    GameObject prop;
+
     public override bool CanSelect(XRBaseInteractable interactable)
     {
         Debug.Log("does this touch?");
@@ -19,7 +20,7 @@ public class rayCastHandler : XRRayInteractor
 
             Debug.Log("we are picking up a glove.");
 
-           
+
             // respawn a second glove here most likely. 
             // turn off collision for this hand so glove does not got onto hand. VIA layer matrix.
         }
@@ -29,7 +30,7 @@ public class rayCastHandler : XRRayInteractor
     }
 
 
-    
+
     public override bool CanHover(XRBaseInteractable interactable)
     {
         Debug.Log("test test test");
@@ -39,10 +40,25 @@ public class rayCastHandler : XRRayInteractor
         {
             interactable.GetComponent<PopUpMenuHandler>().showUI();
 
+            prop = interactable.gameObject;
+
+            interactable.lastHoverExited.AddListener(onLastHoverExited);
+
+           // interactable.hoverExited = interactable.GetComponent<PopUpMenuHandler>().hideUI();
+
         }
 
 
         return base.CanHover(interactable);
     }
+
+
+    protected virtual void onLastHoverExited(HoverExitEventArgs args)
+    {
+        prop.GetComponent<PopUpMenuHandler>().hideUI();
+
+    }
+
+     
 
 }
