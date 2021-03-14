@@ -5,7 +5,7 @@ using UnityEngine;
 public class itemSpawner : MonoBehaviour
 {
     public  List<GameObject> possibleSpawns;
-    private List<GameObject> medicalSupplies;
+    private List<GameObject> medicalSupplies;            /*spawning the props phyiscally breaks them, obje*/
     private List<GameObject> allItems;
     private int numberTimesToShuffle = 50; 
     /*for now I think I can get by without storing each spawned item into its own ADT*/
