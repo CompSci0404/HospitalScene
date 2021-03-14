@@ -693,4 +693,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8447eb9fe74284a80ddff5bc816a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIChildPositionNumber: 0
+  UIChildPositionNumber: 2
