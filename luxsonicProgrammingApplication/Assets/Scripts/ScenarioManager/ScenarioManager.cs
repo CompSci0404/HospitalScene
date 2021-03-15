@@ -3,24 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
 
+/// <summary>
+/// <c>scenario Manager</c>
+/// 
+/// handels the game play loop of the scene.  Determines if the player
+/// has finished the simulation or not by placing content on the correct 
+/// triggers. 
+/// 
+/// </summary>
 public class ScenarioManager : MonoBehaviour
 {
-    public int numberOfItemsInPlay;
+    public int numberOfItemsInPlay;                     /*How many props are currently spawned and are being used within the scene.*/
 
-    public GameObject GameOverCanvas;
+    public GameObject GameOverCanvas;                   /*Game over UI Canvas.*/
 
-    public GameObject scrollWheelContent; 
+    public GameObject scrollWheelContent;               /*Content Gameobject supplied by the scroll wheel attached to the game over UI Canvas.*/
 
-    private Dictionary<string, bool> bottomShelfItems;
+    private Dictionary<string, bool> bottomShelfItems;  /*Dictionary containing every object on the bottom shelf. True means the object is in the correct trigger location. */
 
-    private itemSpawner IS;
+    private itemSpawner IS;                             /*Item spawner, handels spawning and cleaning up items after a simulation play through.*/             
 
-    private bool completedSimulationOnce;
+    private bool completedSimulationOnce;               /*for displaying stats after simulation, used to calculate the time taken pre each session.*/
 
-    private float timeSinceLastRestart;
+    private float timeSinceLastRestart;                 /*time since we restarted the simulation, used to calculate time taking after multiply repeats.*/
 
-    private bool endGamePrompt;
+    private bool endGamePrompt;                         /*have we reached game over? If so stop calling end game within the update loop.*/
 
+
+    /// <summary>
+    /// <c>updateScenarioManager</c>
+    /// 
+    /// pre: Ensure Dictionary is referenced, and nameOfItem, is the name of prop placed in the bottom shelf.
+    ///      Ensure that the name of the prop does not have (clone) at the end.
+    ///      
+    /// post: updates the simulation manager  on wether or not a object is placed in a trigger.
+    /// </summary>
+    /// <param name="itemPlaced">boolean, a value determining if it is placed in a trigger correctly.</param>
+    /// <param name="nameOfItem">string, name of the item placed.</param>
     public void updateScenarioManager(bool itemPlaced, string nameOfItem)
     {
 
@@ -38,6 +57,13 @@ public class ScenarioManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// <c>cleanUpScenarioManager</c>
+    /// 
+    /// pre: dictionary is referenced.
+    /// 
+    /// post: cleans up the encounter, enabling for re-play of simulation.
+    /// </summary>
     public void cleanUpScenarioManager()
     {
         this.bottomShelfItems.Clear();
@@ -45,7 +71,13 @@ public class ScenarioManager : MonoBehaviour
 
     }
 
-
+    /// <summary>
+    /// <c>endGame</c>
+    /// 
+    /// pre: check to see if scenario is finished first.
+    /// 
+    /// post: concludes simulation, updating stats and providing player with a grade for over all effort. 
+    /// </summary>
     public void endGame()
     {
         this.GameOverCanvas.SetActive(true);
@@ -55,7 +87,7 @@ public class ScenarioManager : MonoBehaviour
         if(this.completedSimulationOnce == false)
         {
 
-            float timeCovertedToMinutes = Time.timeSinceLevelLoad; // grab the current time within level. First time is easy. 
+            float timeCovertedToMinutes = Time.timeSinceLevelLoad; /* grab the current time within level. First time is easy. */ 
 
             Debug.Log("time for reset: " + timeCovertedToMinutes);
 
@@ -67,9 +99,9 @@ public class ScenarioManager : MonoBehaviour
         {
 
 
-            float timeSinceLoad = Time.timeSinceLevelLoad;  // current time of completing this run of simulation.
+            float timeSinceLoad = Time.timeSinceLevelLoad;                          /* current time of completing this run of simulation.*/
 
-            float totalTimeFromReset = (timeSinceLoad - this.timeSinceLastRestart); // subtract by when the player clicked restart on the simulation.
+            float totalTimeFromReset = (timeSinceLoad - this.timeSinceLastRestart); /* subtract by when the player clicked restart on the simulation.*/
 
             Debug.Log("time for reset: yeet " + totalTimeFromReset); 
 
@@ -88,10 +120,16 @@ public class ScenarioManager : MonoBehaviour
     }
     
     
-
+    /// <summary>
+    /// <c>restartScenario</c>
+    /// 
+    /// pre: attach to a UI button.
+    /// 
+    /// post: restarts the game by cleaning up the scene, and re-randomizing each item on the top shelf.
+    /// </summary>
     public void restartScenario()
     {
-        // aquire time at the start of the new simulation run time. 
+        /* aquire time at the start of the new simulation run time. */
 
         this.timeSinceLastRestart = Time.timeSinceLevelLoad;
 

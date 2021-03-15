@@ -2,14 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// <c>itemSpawner</c>
+/// 
+/// handels the spawning of objects within the current unity scene. 
+/// to the assignment description.
+/// </summary>
+/// 
 public class itemSpawner : MonoBehaviour
 {
-    public  List<GameObject> possibleSpawns;
-    private List<GameObject> medicalSupplies;            /*spawning the props phyiscally breaks them, obje*/
-    private List<GameObject> allItems;
-    private int numberTimesToShuffle = 50; 
-    /*for now I think I can get by without storing each spawned item into its own ADT*/
+    public  List<GameObject> possibleSpawns;             /*all spawns that we have, to spawn a object.*/
+    private List<GameObject> medicalSupplies;            /*each medical prop used, gained from the resource folder.*/
+    private List<GameObject> allItems;                   /*all items spawned, stored within this list.*/
+    private int numberTimesToShuffle = 50;               /*number of times to randomly shuffle the spawn locations.*/
+ 
    
+    /// <summary>
+    /// <c>buildMedicalSupplies</c>
+    /// 
+    /// pre: ensure that the folder being pulled from contains prefab content. If not exceptions will be thrown.
+    /// 
+    /// post: finds the medical props and stores them within the medical supplies. We have not spawned them yet though.
+    /// </summary>
     public void buildMedicalSupplies()
     {
         this.medicalSupplies = new List<GameObject>();
@@ -33,6 +47,14 @@ public class itemSpawner : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// <c>spawnItemsOnShelf</c>
+    /// 
+    /// pre: ensure that medical supply list has been generated.
+    /// 
+    /// post: spawns each medical prop to a random spawn location. Add the spawned item to 
+    /// a list to keep track of them within scene.
+    /// </summary>
     public void spawnItemsOnShelf()
     {
 
@@ -68,7 +90,13 @@ public class itemSpawner : MonoBehaviour
 
     }
 
-
+    /// <summary>
+    /// <c>cleanUpItems</c>
+    /// 
+    /// pre: system has been built.
+    /// 
+    /// post: cleans up props used within the simulation.
+    /// </summary>
     public void cleanUpItems()
     {
 

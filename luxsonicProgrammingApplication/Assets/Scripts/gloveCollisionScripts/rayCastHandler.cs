@@ -1,28 +1,46 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/// <summary>
+/// <c>rayCastHandler</c>
+/// 
+/// over rides the XR ray Interactor class so we can further define what happens 
+/// when we the VR joy sticks use objects found within the scene. 
+/// 
+/// </summary>
 public class rayCastHandler : XRRayInteractor
 {
-    GameObject prop;
+    private GameObject prop;    /*The prop that is currently has a ray cast hovering over it.*/
 
+    /// <summary>
+    /// <c>CanSelect</c>
+    /// 
+    /// pre: ensure XR settings are correctly setup within Scene to conduct VR game play. 
+    /// 
+    /// 
+    /// post: When selecting a object, if the object is a Glove, ensure that we cannot put the glove on the current hand
+    ///       grabbing it.
+    /// 
+    /// </summary>
+    /// <param name="interactable"> the object that we are currently interacting within scene</param>
+    /// <returns>true if we can interact with a object, false otherwise.</returns>
     public override bool CanSelect(XRBaseInteractable interactable)
     {
-        Debug.Log("does this touch?");
+      
 
         if (interactable.gameObject.tag.Equals("Glove"))
         {
 
             GameObject hand = this.gameObject.transform.GetChild(0).gameObject;
 
-            Debug.Log(hand.name);
+           
 
-            Physics.IgnoreLayerCollision(hand.layer, interactable.gameObject.layer, true);  // turn off collision for this hand, so glove does not automatically drop on hand holding it.
+            Physics.IgnoreLayerCollision(hand.layer, interactable.gameObject.layer, true);  /* turn off collision for this hand, so glove does not automatically drop on hand holding it.*/
 
-            Debug.Log("we are picking up a glove.");
+            
 
 
-            // respawn a second glove here most likely. 
-            // turn off collision for this hand so glove does not got onto hand. VIA layer matrix.
+
         }
 
 
@@ -30,10 +48,19 @@ public class rayCastHandler : XRRayInteractor
     }
 
 
-
+    /// <summary>
+    /// <c>CanHover</c>
+    /// 
+    /// pre: ensure XR settings are correctly setup within Scene to conduct VR game play.
+    /// 
+    /// post: handels when a the player points a joystick ray cast at a prop, activates the description UI window
+    /// 
+    /// </summary>
+    /// <param name="interactable">the object that we are currently interacting within scene</param>
+    /// <returns>True if we can hover over a object. False if not.</returns>
     public override bool CanHover(XRBaseInteractable interactable)
     {
-        Debug.Log("test test test");
+        
 
 
         if (interactable.gameObject.tag.Equals("Prop"))
@@ -44,15 +71,22 @@ public class rayCastHandler : XRRayInteractor
 
             interactable.lastHoverExited.AddListener(onLastHoverExited);
 
-           // interactable.hoverExited = interactable.GetComponent<PopUpMenuHandler>().hideUI();
-
         }
 
 
         return base.CanHover(interactable);
     }
 
-
+    /// <summary>
+    /// <c>onLastHoverExited</c>
+    /// 
+    /// pre: hook up this current event to a listener. 
+    /// 
+    /// post: event is attached to a listener, when the player stops pointing ray cast beam 
+    ///      at a prop game object, then hide the description UI. 
+    ///      
+    /// </summary>
+    /// <param name="args">HoverExitEventArgs, handeled by main class, what is being passed to the delegate function</param>
     protected virtual void onLastHoverExited(HoverExitEventArgs args)
     {
         prop.GetComponent<PopUpMenuHandler>().hideUI();
