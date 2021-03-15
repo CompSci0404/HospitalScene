@@ -31,7 +31,7 @@ public class rayCastHandler : XRRayInteractor
         if (interactable.gameObject.tag.Equals("Glove"))
         {
 
-            Debug.Log("test?");
+           
             interactable.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
 
@@ -41,11 +41,11 @@ public class rayCastHandler : XRRayInteractor
 
             Physics.IgnoreLayerCollision(hand.layer, interactable.gameObject.layer, true);  /* turn off collision for this hand, so glove does not automatically drop on hand holding it.*/
 
-
+            interactable.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
         else if (interactable.gameObject.tag.Equals("gloveBox"))
         {
-            Debug.Log("test?2");
+           
             interactable.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
 
