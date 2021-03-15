@@ -31,18 +31,25 @@ public class rayCastHandler : XRRayInteractor
         if (interactable.gameObject.tag.Equals("Glove"))
         {
 
+            Debug.Log("test?");
+            interactable.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
+
             GameObject hand = this.gameObject.transform.GetChild(0).gameObject;
 
            
 
             Physics.IgnoreLayerCollision(hand.layer, interactable.gameObject.layer, true);  /* turn off collision for this hand, so glove does not automatically drop on hand holding it.*/
 
-            
 
+        }
+        else if (interactable.gameObject.tag.Equals("gloveBox"))
+        {
+            Debug.Log("test?2");
+            interactable.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
 
         }
-
 
         return base.CanSelect(interactable);
     }
@@ -63,7 +70,7 @@ public class rayCastHandler : XRRayInteractor
         
 
 
-        if (interactable.gameObject.tag.Equals("Prop"))
+        if (interactable.gameObject.tag.Equals("Prop") || interactable.gameObject.tag.Equals("gloveBox"))
         {
             interactable.GetComponent<PopUpMenuHandler>().showUI();
 
@@ -72,6 +79,7 @@ public class rayCastHandler : XRRayInteractor
             interactable.lastHoverExited.AddListener(onLastHoverExited);
 
         }
+
 
 
         return base.CanHover(interactable);

@@ -45,13 +45,21 @@ public class PlacementChecker : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// <c>OnTriggerExit</c>
+    /// 
+    /// pre: attach this script to the object that is looking for a prop to trigger it.
+    /// 
+    /// post: checks to see when a prop leaves its placement, updates the scenario Manager. 
+    /// </summary>
+    /// <param name="other">collider, the object trigging the collision.</param>
 
     public void OnTriggerExit(Collider other)
     {
         if (other.gameObject.name.Equals(nameOfItemPlacedHere))
         {
             itemPlaced = false;
-
+            
             SManager.updateScenarioManager(itemPlaced, nameOfItemPlacedHere);
             SManager.removeItemToCorrectlyPlacedObject();
         }

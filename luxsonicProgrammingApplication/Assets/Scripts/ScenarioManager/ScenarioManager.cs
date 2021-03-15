@@ -58,19 +58,32 @@ public class ScenarioManager : MonoBehaviour
 
     }
 
-
+    /// <summary>
+    /// <c>addItemToCorrectlyPlacedObject</c>
+    /// 
+    /// pre: call when item triggers a successful placement.
+    /// 
+    /// post: adds to the total number of correctly placed items.
+    /// </summary>
     public void addItemToCorrecltyPlacedObject()
     {
         this.currentNumberOfItemsPlaced++;
-        Debug.Log("adding item current numbers correctly placed: " + this.currentNumberOfItemsPlaced);
+       // Debug.Log("adding item current numbers correctly placed: " + this.currentNumberOfItemsPlaced);
 
     }
 
+    /// <summary>
+    /// <c>removeItemToCorrectlyPlacedObject</c>
+    /// 
+    /// pre: call when item triggers a leave of placement
+    /// 
+    /// post: removes the total number of correctly placed items. 
+    /// </summary>
     public void removeItemToCorrectlyPlacedObject()
     {
         this.currentNumberOfItemsPlaced--;
 
-        Debug.Log("removing item current numbers correctly placed: " + this.currentNumberOfItemsPlaced);
+       // Debug.Log("removing item current numbers correctly placed: " + this.currentNumberOfItemsPlaced);
 
 
     }
@@ -137,7 +150,14 @@ public class ScenarioManager : MonoBehaviour
 
     }
     
-
+    /// <summary>
+    /// <c>scenarioFinished</c>
+    /// 
+    /// pre: call before ending the game
+    /// 
+    /// post: counts through values within dictionary and ensures each one is True. 
+    /// </summary>
+    /// <returns>bool, true if all values are true. False if one of the values is false.</returns>
     public bool scenarioFinished()
     {
         bool finished = false; 
