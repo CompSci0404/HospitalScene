@@ -37,9 +37,23 @@ public class PlacementChecker : MonoBehaviour
 
             SManager.updateScenarioManager(itemPlaced, nameOfItemPlacedHere);
 
+            SManager.addItemToCorrecltyPlacedObject();
+
            // other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
 
+        }
+    }
+
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name.Equals(nameOfItemPlacedHere))
+        {
+            itemPlaced = false;
+
+            SManager.updateScenarioManager(itemPlaced, nameOfItemPlacedHere);
+            SManager.removeItemToCorrectlyPlacedObject();
         }
     }
 

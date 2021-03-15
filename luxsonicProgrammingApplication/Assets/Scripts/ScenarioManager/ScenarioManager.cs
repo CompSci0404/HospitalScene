@@ -29,6 +29,7 @@ public class ScenarioManager : MonoBehaviour
 
     private bool endGamePrompt;                         /*have we reached game over? If so stop calling end game within the update loop.*/
 
+    private int currentNumberOfItemsPlaced;             /*the current number of items placed correclty on triggers.*/
 
     /// <summary>
     /// <c>updateScenarioManager</c>
@@ -54,6 +55,23 @@ public class ScenarioManager : MonoBehaviour
             this.bottomShelfItems.Add(nameOfItem, itemPlaced);
 
         }
+
+    }
+
+
+    public void addItemToCorrecltyPlacedObject()
+    {
+        this.currentNumberOfItemsPlaced++;
+        Debug.Log("adding item current numbers correctly placed: " + this.currentNumberOfItemsPlaced);
+
+    }
+
+    public void removeItemToCorrectlyPlacedObject()
+    {
+        this.currentNumberOfItemsPlaced--;
+
+        Debug.Log("removing item current numbers correctly placed: " + this.currentNumberOfItemsPlaced);
+
 
     }
 
@@ -115,11 +133,34 @@ public class ScenarioManager : MonoBehaviour
 
         scrollWheelContent.GetComponentInChildren<Text>().text = stats;        /*provide some cool stats for the player, to validate their accomplishments!*/
 
-        this.endGamePrompt = true;
+        
 
     }
     
-    
+
+    public bool scenarioFinished()
+    {
+        bool finished = false; 
+
+        foreach (KeyValuePair<string, bool> counter in this.bottomShelfItems)
+        {
+            if(counter.Value != true)
+            {
+
+                return finished;
+            }
+
+        }
+
+        this.endGamePrompt = true;
+        finished = true;
+
+
+        return finished; 
+
+    }
+
+
     /// <summary>
     /// <c>restartScenario</c>
     /// 
@@ -148,18 +189,21 @@ public class ScenarioManager : MonoBehaviour
         this.IS = GameObject.FindGameObjectWithTag("itemHandler").GetComponent<itemSpawner>();
 
         this.completedSimulationOnce = false;
-        this.endGamePrompt = false; 
+        this.endGamePrompt = false;
 
+        this.currentNumberOfItemsPlaced = 0; 
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if(this.numberOfItemsInPlay == this.bottomShelfItems.Count && this.endGamePrompt == false)
+        if(this.numberOfItemsInPlay == this.currentNumberOfItemsPlaced && this.endGamePrompt == false)
         {
-            endGame();
-
+            if (scenarioFinished())
+            {
+                endGame();
+            }
         }
 
 
