@@ -11,7 +11,7 @@ public class PopUpMenuHandler : MonoBehaviour
 {
 
     public int UIChildPositionNumber;           /*which child is the UI located at. We cannot save Gameobjects references when a prop is a prefab.*/
-    private GameObject PopUpUi;                 /*the Description UI element attached to each gameobject. Script handels giving a refrence*/
+    private GameObject PopUpUi;                 /*the Description UI canvas element attached to each prop gameobject. Script handels giving a refrence*/
 
 
     /// <summary>
@@ -47,6 +47,8 @@ public class PopUpMenuHandler : MonoBehaviour
     {
 
         this.PopUpUi = this.gameObject.transform.GetChild(this.UIChildPositionNumber).gameObject;
+
+        this.PopUpUi.GetComponent<Canvas>().worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();    /*ensure we always have the main camera reference.*/
 
         this.hideUI();
 
